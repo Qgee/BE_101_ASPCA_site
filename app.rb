@@ -29,10 +29,10 @@ get '/contact_us' do
 	erb :contact_us
 end
 
-# post '/submitted_post' do
-#  	puts "My parameters are: " + params.inspect 
-# end
-
-get '/submitted_post' do
-	erb :submitted_post
+post '/submitted_post' do
+ 	@name = params[:name]
+ 	@email = params[:email]
+ 	@message = params[:message]
+ 	erb :submitted_post
 end
+
